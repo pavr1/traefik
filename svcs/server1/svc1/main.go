@@ -20,13 +20,13 @@ func main() {
 }
 
 func endpoint1(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "svc1.endpoint1")
+	fmt.Fprintf(w, "server1.svc1.endpoint1")
 }
 
 func endpoint2(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "svc1.endpoint2")
+	fmt.Fprintf(w, "server1.svc1.endpoint2")
 }
 
 func endpoint3(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "svc1.endpoint3")
+	fmt.Fprintf(w, "server1.svc1.endpoint3")
 }

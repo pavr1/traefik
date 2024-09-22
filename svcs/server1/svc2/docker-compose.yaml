@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  svc2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 9001:9001
+    networks:
+      - traefik-net
+    labels:
+      - "traefik.http.routers.svc2.rule=(Host(`server1.localhost`) && PathPrefix(`/svc2`))"
+      - "traefik.docker.network=traefik-net"
+
+networks:
+  traefik-net:
+    external: true

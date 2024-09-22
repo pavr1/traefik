@@ -1,16 +1,16 @@
 version: '3'
 
 services:
-  svc1:
+  svc3:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 9000:9000
+      - 9002:9002
     networks:
       - traefik-net
     labels:
-      - "traefik.http.routers.svc1.rule=Host(`svc1.localhost`)"
+      - "traefik.http.routers.svc3.rule=Host(`server2.localhost`)"
       - "traefik.docker.network=traefik-net"
 
 networks:
